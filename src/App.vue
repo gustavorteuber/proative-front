@@ -13,9 +13,10 @@ export default {
 </script>
 
 <template>
-  <div class="bg-neutral-900 justify-center">
-    <Login />
-  </div>
+  <headerinfo></headerinfo>
+  <heading></heading>
+  <cardsinfo></cardsinfo>
+  <footerinfo></footerinfo>
 </template>
 
 <style scoped></style>
