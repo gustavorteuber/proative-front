@@ -5,39 +5,33 @@
         <h2
           class="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400"
         >
-          Company
+          Proative
         </h2>
         <ul class="text-gray-500">
           <li class="mb-4">
-            <a href="#" class="hover:underline">About</a>
+            <a href="#" class="hover:underline">Sobre nós</a>
           </li>
           <li class="mb-4">
-            <a href="#" class="hover:underline">Careers</a>
+            <a href="#" class="hover:underline">Como começar</a>
           </li>
           <li class="mb-4">
-            <a href="#" class="hover:underline">Brand Center</a>
-          </li>
-          <li class="mb-4">
-            <a href="#" class="hover:underline">Blog</a>
+            <a href="#" class="hover:underline">FAQ</a>
           </li>
         </ul>
       </div>
       <div>
         <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">
-          Help center
+          Entre em contato
         </h2>
         <ul class="text-gray-400">
           <li class="mb-4">
             <a href="#" class="hover:underline">Discord Server</a>
           </li>
           <li class="mb-4">
-            <a href="#" class="hover:underline">Twitter</a>
-          </li>
-          <li class="mb-4">
             <a href="#" class="hover:underline">Facebook</a>
           </li>
           <li class="mb-4">
-            <a href="#" class="hover:underline">Contact Us</a>
+            <a href="#" class="hover:underline">Entre em contato</a>
           </li>
         </ul>
       </div>
@@ -49,13 +43,13 @@
         </h2>
         <ul class="text-gray-500 dark:text-gray-400">
           <li class="mb-4">
-            <a href="#" class="hover:underline">Privacy Policy</a>
+            <a href="#" class="hover:underline">Politica e privacidade</a>
           </li>
           <li class="mb-4">
-            <a href="#" class="hover:underline">Licensing</a>
+            <a href="#" class="hover:underline">Licença</a>
           </li>
           <li class="mb-4">
-            <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+            <a href="#" class="hover:underline">Termos &amp; Condições </a>
           </li>
         </ul>
       </div>
@@ -82,7 +76,7 @@
       </div>
     </div>
     <div
-      class="px-4 py-6 bg-gradient-to-r to-emerald-600 from-sky-400 md:flex md:items-center md:justify-between rounded-3xl"
+      class="px-4 py-6 bg-neutral-500 md:flex md:items-center md:justify-between rounded-3xl"
     >
       <span class="text-sm text-neutral-900 sm:text-center"
         >© 2023 <a href="https://flowbite.com/">Proative™</a>. Todos os direitos
