@@ -195,7 +195,7 @@ export default {
 
 <style scoped>
 body {
-  transition: background-color 0.5s ease;
+  transition: background-color 0s ease;
   /* padding: 1rem; */
 }
 </style>
