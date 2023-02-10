@@ -110,7 +110,7 @@ export default {
                 class="block py-2 pl-3 pr-4 text-neutral-700 rounded hover:bg-neutral-100 md:hover:bg-transparent md:hover:text-emerald-700 md:p-0 :text-neutral-400 md::hover:text-emerald-500 :hover:bg-neutral-700 :hover:text-emerald-500 md::hover:bg-transparent :border-neutral-700"
                 @click="isDark = !isDark"
               >
-                Light
+                <i class="fa-regular fa-sun"></i>
               </button>
               <button
                 v-if="isDark == false"
@@ -118,7 +118,7 @@ export default {
                 class="block py-2 pl-3 pr-4 text-neutral-700 rounded hover:bg-neutral-100 md:hover:bg-transparent md:hover:text-emerald-700 md:p-0 :text-neutral-400 md::hover:text-emerald-500 :hover:bg-neutral-700 :hover:text-emerald-500 md::hover:bg-transparent :border-neutral-700"
                 @click="isDark = !isDark"
               >
-                Dark
+                <i class="fa-regular fa-moon"></i>
               </button>
             </li>
           </ul>
@@ -130,5 +130,9 @@ export default {
 <style scoped>
 nav {
   transition: background-color 0.5s ease;
+}
+
+i {
+  font-size: 16pt;
 }
 </style>
