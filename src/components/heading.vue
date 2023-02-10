@@ -35,7 +35,7 @@ export default {
       </h1>
     </div>
     <p
-      class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
+      class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 text-gray-400"
     >
       Oferecemos soluções logísticas personalizadas para empresas. Com sistemas
       avançados e equipe capacitada, garantimos eficiência e segurança nas

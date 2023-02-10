@@ -43,9 +43,9 @@ export default {
     },
     ColorButton() {
       if (this.isDark == true) {
-        return "inline-flex items-center px-3 py-2 text-sm font-bold text-center text-neutral-900 bg-emerald-600 rounded-lg hover:bg-emerald-800 focus:ring-4 focus:outline-none bg-neutral-900";
+        return "inline-flex items-center px-3 py-2 text-sm font-bold text-center text-neutral-900 bg-emerald-600 rounded-lg hover:bg-emerald-800 focus:ring-4 ";
       } else {
-        return "inline-flex items-center px-3 py-2 text-sm font-bold text-center text-white border border-emerald-500 bg-emerald-600  rounded-lg hover:bg-emerald-800  focus:ring-4 focus:outline-none bg-neutral-900";
+        return "inline-flex items-center px-3 py-2 text-sm font-bold text-center text-white border border-emerald-500 bg-emerald-600  rounded-lg hover:bg-emerald-800  focus:ring-4";
       }
     },
   },
@@ -63,7 +63,7 @@ export default {
         </a>
         <p :class="ColorSubtitle()">
           Aqui temos o Plano Free, no qual apresentamos uma demonstração da
-          plataforma.
+          plataforma com limitações de uso, apenas para testes.
         </p>
         <a href="#" :class="ColorButton()">
           Conheça mais!
