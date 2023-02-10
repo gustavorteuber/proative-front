@@ -12,6 +12,14 @@ export default {
     };
   },
   methods: {
+    special() {
+      if (this.isDark == true) {
+        return "inline-flex items-center px-3 py-2 text-sm font-bold text-center text-neutral-900 rounded-lg bg-gradient-to-r to-emerald-600 from-sky-400";
+      } else {
+        return "inline-flex items-center px-3 py-2 text-sm font-bold text-center text-white rounded-lg bg-gradient-to-r to-emerald-600 from-sky-400";
+      }
+    },
+
     colorCard() {
       if (this.isDark == true) {
         return "max-w-sm border border-emerald-500 rounded-lg shadow bg-neutral-800 m-5";
@@ -35,9 +43,9 @@ export default {
     },
     ColorButton() {
       if (this.isDark == true) {
-        return "inline-flex items-center px-3 py-2 text-sm font-medium text-center text-emerald-500 border border-emerald-500 bg-neutral-900 rounded-lg hover:bg-neutral-800 focus:ring-4 focus:outline-none bg-neutral-900";
+        return "inline-flex items-center px-3 py-2 text-sm font-bold text-center text-neutral-900 bg-emerald-600 rounded-lg hover:bg-emerald-800 focus:ring-4 focus:outline-none bg-neutral-900";
       } else {
-        return "inline-flex items-center px-3 py-2 text-sm font-medium text-center text-emerald-500 border border-emerald-500 bg-white rounded-lg hover:bg-white focus:ring-4 focus:outline-none bg-neutral-900";
+        return "inline-flex items-center px-3 py-2 text-sm font-bold text-center text-white border border-emerald-500 bg-emerald-600  rounded-lg hover:bg-emerald-800  focus:ring-4 focus:outline-none bg-neutral-900";
       }
     },
   },
@@ -117,10 +125,7 @@ export default {
           Aqui temos o Plano Premium, no qual está desbloqueado todas as
           funcionalidades e tudo o que o Proative tem a oferecer.
         </p>
-        <a
-          href="#"
-          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-gradient-to-r to-emerald-600 from-sky-400"
-        >
+        <a href="#" :class="special()">
           Conheça mais!
           <svg
             aria-hidden="true"
