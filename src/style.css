@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-#app {
-  padding: 1rem;
+body {
+  transition: background-color 0.5s ease;
 }
-
-

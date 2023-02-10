@@ -6,22 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proative</title>
   </head>
-  <body v-if="isDark == true" class="bg-neutral-900" v-if="isDark == false" class="bg-white">
+  <body :class="colorBody()">
     <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
-  <script>
-    import { useDark, useToggle } from "@vueuse/core";
-    export default {
-      setup() {
-        const isDark = useDark();
-        const toggle = useToggle(isDark);
-      
-        return {
-          isDark,
-          toggle,
-        };
-      },};
+    <script type="module" src="/src/main.js">
+      // import { useDark, useToggle } from "@vueuse/core";
 
-  </script>
+      // export default {
+      //   setup() {
+      //     const isDark = useDark();
+      //     const toggle = useToggle(isDark);
+
+      //     return {
+      //       isDark,
+      //       toggle,
+      //     };
+      //   },
+      //   methods: {
+      //     colorBody() {
+      //       if (this.isDark == true) {
+      //         return "bg-neutral-900";
+      //       } else {
+      //         return "bg-white";
+      //       }
+      //     },
+      //   },
+      // };
+    </script>
+  </body>
 </html>
