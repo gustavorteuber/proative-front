@@ -194,8 +194,8 @@ export default {
 </template>
 
 <style scoped>
-body {
+footer {
   transition: background-color 0s ease;
-  /* padding: 1rem; */
+  padding: 1rem;
 }
 </style>

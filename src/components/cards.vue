@@ -54,16 +54,14 @@ export default {
 <template>
   <div class="flex justify-center mt-20">
     <div :class="colorCard()">
-      <a href="#">
-        <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
-      </a>
+      <a href="#"> </a>
       <div class="p-5">
         <a href="#">
           <h5 :class="ColorTitle()">Plano Free</h5>
         </a>
         <p :class="ColorSubtitle()">
           Aqui temos o Plano Free, no qual apresentamos uma demonstração da
-          plataforma com limitações de uso, apenas para testes.
+          plataforma com limitações de uso.
         </p>
         <a href="#" :class="ColorButton()">
           Conheça mais!
@@ -84,9 +82,7 @@ export default {
       </div>
     </div>
     <div :class="colorCard()">
-      <a href="#">
-        <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
-      </a>
+      <a href="#"> </a>
       <div class="p-5">
         <a href="#">
           <h5 :class="ColorTitle()">Plano Pro</h5>
@@ -114,9 +110,7 @@ export default {
       </div>
     </div>
     <div :class="colorCard()">
-      <a href="#">
-        <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
-      </a>
+      <a href="#"> </a>
       <div class="p-5">
         <a href="#">
           <h5 :class="ColorTitle()">Plano Premium</h5>
