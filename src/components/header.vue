@@ -69,32 +69,26 @@ export default {
           <ul :class="colorDetail()">
             <li>
               <a
-                href="#"
+                href="/"
                 class="block py-2 pl-3 pr-4 text-neutral-700 rounded hover:bg-neutral-100 md:hover:bg-transparent md:hover:text-emerald-700 md:p-0 :text-neutral-400 md::hover:text-emerald-500 :hover:bg-neutral-700 :hover:text-emerald-500 md::hover:bg-transparent :border-neutral-700"
                 aria-current="page"
                 >Home</a
               >
             </li>
             <li>
-              <button
-                id="mega-menu-full-dropdown-button"
-                data-collapse-toggle="mega-menu-full-dropdown"
-                class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-neutral-700 rounded md:w-auto hover:bg-neutral-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-600 md:p-0 :text-neutral-400 md::hover:text-emerald-500 :hover:bg-neutral-700 :hover:text-emerald-500 md::hover:bg-transparent :border-neutral-700"
-              >
-                Sobre nós
-                <svg
-                  class="w-5 h-5 ml-1"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+              <a href="/about">
+                <button
+                  id="mega-menu-full-dropdown-button"
+                  data-collapse-toggle="mega-menu-full-dropdown"
+                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-neutral-700 rounded md:w-auto hover:bg-neutral-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-600 md:p-0 :text-neutral-400 md::hover:text-emerald-500 :hover:bg-neutral-700 :hover:text-emerald-500 md::hover:bg-transparent :border-neutral-700"
                 >
+                  Sobre nós
                   <path
                     fill-rule="evenodd"
                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                     clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </button>
+                  ></path></button
+              ></a>
             </li>
             <li>
               <a
@@ -128,7 +122,7 @@ export default {
   </body>
 </template>
 <style scoped>
-nav {
+body {
   transition: background-color 0.5s ease;
 }
 

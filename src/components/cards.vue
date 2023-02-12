@@ -22,9 +22,9 @@ export default {
 
     colorCard() {
       if (this.isDark == true) {
-        return "max-w-sm border border-emerald-500 rounded-lg shadow bg-neutral-800 m-5";
+        return "max-w-sm border border-emerald-500 rounded-lg shadow bg-neutral-800 m-5 flex flex-col sm:flex-row h-auto w-full";
       } else {
-        return "max-w-sm bg-white border border-gray-200 rounded-lg shadow m-5";
+        return "max-w-sm border border-emerald-500 rounded-lg shadow bg-white m-5 flex flex-col sm:flex-row h-auto w-full ";
       }
     },
     ColorTitle() {
@@ -56,7 +56,7 @@ export default {
     <div :class="colorCard()">
       <a href="#"> </a>
       <div class="p-5">
-        <a href="#">
+        <a href="/login">
           <h5 :class="ColorTitle()">Plano Free</h5>
         </a>
         <p :class="ColorSubtitle()">
@@ -84,7 +84,7 @@ export default {
     <div :class="colorCard()">
       <a href="#"> </a>
       <div class="p-5">
-        <a href="#">
+        <a href="/login">
           <h5 :class="ColorTitle()">Plano Pro</h5>
         </a>
         <p :class="ColorSubtitle()">
@@ -112,14 +112,14 @@ export default {
     <div :class="colorCard()">
       <a href="#"> </a>
       <div class="p-5">
-        <a href="#">
+        <a href="login">
           <h5 :class="ColorTitle()">Plano Premium</h5>
         </a>
         <p :class="ColorSubtitle()">
           Aqui temos o Plano Premium, no qual está desbloqueado todas as
           funcionalidades e tudo o que o Proative tem a oferecer.
         </p>
-        <a href="#" :class="special()">
+        <a href="/login" :class="special()">
           Conheça mais!
           <svg
             aria-hidden="true"

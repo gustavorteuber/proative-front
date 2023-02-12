@@ -1,80 +1,89 @@
 <template>
-    <section class="h-full gradient-form bg-neutral-800 md:h-screen">
-  <div class="container py-12 px-6 h-full">
-    <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
-      <div class="xl:w-10/12">
-        <div class="block bg-white shadow-lg rounded-lg">
-          <div class="lg:flex lg:flex-wrap g-0">
-            <div class="lg:w-6/12 px-4 md:px-0">
-              <div class="md:p-12 md:mx-6">
-                <div class="text-center">
-                  <img
-                    class="mx-auto w-48"
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
-                    alt="logo"
-                  />
-                  <h4 class="text-xl font-semibold mt-1 mb-12 pb-1">Nós somos a Proative</h4>
-                </div>
-                <form>
-                  <p class="mb-4">Por favor, logue na sua conta: </p>
-                  <div class="mb-4">
-                    <input
-                      type="text"
-                      class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                      id="exampleFormControlInput1"
-                      placeholder="Username"
-                    />
-                  </div>
-                  <div class="mb-4">
-                    <input
-                      type="password"
-                      class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                      id="exampleFormControlInput1"
-                      placeholder="Senha"
-                    />
-                  </div>
-                  <div class="text-center pt-1 mb-12 pb-1">
-                    <button
-                      class="inline-block px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3 bg-gradient-to-r to-emerald-600 from-sky-400"
-                      type="button"
-                      data-mdb-ripple="true"
-                      data-mdb-ripple-color="light"
-                    >
-                      Log in
-                    </button>
-                    <a class="text-gray-500" href="#!">Esqueceu a senha?</a>
-                  </div>
-                  <div class="flex items-center justify-between pb-6">
-                    <p class="mb-0 mr-2">Não tem conta ainda?</p>
-                    <button
-                      type="button"
-                      class="inline-block px-6 py-2 border-2 border-red-600 text-red-600 font-medium text-xs leading-tight uppercase rounded hover:bg-red-400 hover:text-white focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-                      data-mdb-ripple="true"
-                      data-mdb-ripple-color="light"
-                    >
-                      Criar conta
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <div
-              class="lg:w-6/12 flex items-center lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none bg-gradient-to-r to-emerald-600 from-sky-400"
+  <div
+    class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0"
+  >
+    <a
+      href="#"
+      class="flex items-center mb-6 text-2xl font-semibold text-emerald-700"
+    >
+      Proative
+    </a>
+    <div
+      class="w-full rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 border-gray-700"
+    >
+      <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+        <h1
+          class="text-xl font-bold leading-tight tracking-tight text-emerald-500 md:text-2xl dark:text-white"
+        >
+          Entre na sua conta:
+        </h1>
+        <form class="space-y-4 md:space-y-6" action="#">
+          <div>
+            <label
+              for="email"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Seu email</label
             >
-              <div class="text-white px-4 py-6 md:p-12 md:mx-6">
-                <h4 class="text-xl font-semibold mb-6">Nós somos mais que uma empresa</h4>
-                <p class="text-sm">
-                    Oferecemos soluções logísticas personalizadas para empresas. Com sistemas
-                    avançados e equipe capacitada, garantimos eficiência e segurança nas
-                    entregas. Entre em contato conosco para otimizar a sua cadeia de
-                    suprimentos.
-                </p>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="bg-neutral-900 border border-gray-300 text-white sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="name@company.com"
+            />
+          </div>
+          <div>
+            <label
+              for="password"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Sua senha</label
+            >
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="••••••••"
+              class="bg-neutral-900 border border-gray-300 text-white sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-start">
+              <div class="flex items-center h-5">
+                <input
+                  id="remember"
+                  aria-describedby="remember"
+                  type="checkbox"
+                  class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
+                />
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="remember" class="text-gray-500 dark:text-gray-300"
+                  >Remember me</label
+                >
               </div>
             </div>
+            <a
+              href="#"
+              class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500"
+              >Forgot password?</a
+            >
           </div>
-        </div>
+          <button
+            type="submit"
+            class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+          >
+            Sign in
+          </button>
+          <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+            Don’t have an account yet?
+            <a
+              href="#"
+              class="font-medium text-primary-600 hover:underline dark:text-primary-500"
+              >Sign up</a
+            >
+          </p>
+        </form>
       </div>
     </div>
   </div>
-</section>
 </template>
