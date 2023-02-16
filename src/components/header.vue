@@ -122,10 +122,6 @@ export default {
   </body>
 </template>
 <style scoped>
-body {
-  transition: background-color 0.5s ease;
-}
-
 i {
   font-size: 16pt;
 }

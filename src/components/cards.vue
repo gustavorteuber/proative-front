@@ -63,7 +63,7 @@ export default {
           Aqui temos o Plano Free, no qual apresentamos uma demonstração da
           plataforma com limitações de uso.
         </p>
-        <a href="#" :class="ColorButton()">
+        <RouterLink to="/login" :class="ColorButton()">
           Conheça mais!
           <svg
             aria-hidden="true"
@@ -78,7 +78,7 @@ export default {
               clip-rule="evenodd"
             ></path>
           </svg>
-        </a>
+        </RouterLink>
       </div>
     </div>
     <div :class="colorCard()">
@@ -140,8 +140,4 @@ export default {
   </div>
 </template>
 
-<style>
-colorCard {
-  transition: background-color 0.5s ease;
-}
-</style>
+<style></style>

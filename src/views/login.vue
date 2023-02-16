@@ -1,16 +1,14 @@
 <script>
-import background from "../components/login/background.vue";
 import login from "../components/login/Login.vue";
 export default {
-  components: { login, background },
+  components: { login },
   data() {
     return {};
   },
 };
 </script>
 <template>
-  <background></background>
-  <login></login>
+  <login />
 </template>
 
 <style scoped></style>

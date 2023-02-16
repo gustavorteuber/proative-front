@@ -3,9 +3,8 @@ import { useDark, useToggle } from "@vueuse/core";
 import paragraph from "../components/paragraph.vue";
 import footerinfo from "../components/footer.vue";
 import headerinfo from "../components/header.vue";
-import Login from "../components/login/Login.vue";
 export default {
-  components: { headerinfo, paragraph, footerinfo, Login },
+  components: { headerinfo, paragraph, footerinfo },
   setup() {
     const isDark = useDark();
     const toggle = useToggle(isDark);

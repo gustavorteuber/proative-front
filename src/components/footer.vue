@@ -195,7 +195,6 @@ export default {
 
 <style scoped>
 footer {
-  transition: background-color 0s ease;
   padding: 1rem;
 }
 </style>
