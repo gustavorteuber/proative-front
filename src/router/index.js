@@ -2,8 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Login from "../views/login.vue";
 import About from "../views/about.vue";
 import Home from "../views/home.vue";
-import dashboard from "../views/master/dashboard.vue";
-import notification from "../views/notification.vue";
+import homedash from "../views/homedash.vue";
 
 const routes = [
   {
@@ -22,17 +21,9 @@ const routes = [
     component: About,
   },
   {
-    name: "Dashboard",
     path: "/home",
-    component: dashboard,
-    children: [
-      { path: "/home", name: "dashboard", component: dashboard },
-      {
-        path: "/notification",
-        name: "Notification",
-        component: notification,
-      },
-    ],
+    name: "homeDash",
+    component: homedash,
   },
 ];
 const router = Router();

@@ -25,6 +25,13 @@ export default {
         return "bg-white";
       }
     },
+    colorText() {
+      if (this.isDark == true) {
+        return "text-sm font-medium text-transparent bg-clip-text bg-emerald-600";
+      } else {
+        return "text-sm font-medium";
+      }
+    },
     ...mapActions(useAuthStore, ["login"]),
     async submitLogin() {
       try {
@@ -47,13 +54,11 @@ export default {
         >
           Bem-vindo ao Proative!
         </h1>
-        <form action="" class="mt-6 mb-0 space-y-4 rounded-lg p-8 shadow-2xl">
+        <form action="" class="mt-6 mb-0 space-y-4 rounded-lg p-12 shadow-2xl">
           <p class="text-lg font-medium">Entre com a sua conta</p>
 
           <div>
-            <label for="email" class="text-sm font-medium"
-              >Nome de usuario:</label
-            >
+            <label for="email" :class="colorText()">Nome de usuario:</label>
 
             <div class="relative mt-1">
               <input
@@ -84,7 +89,7 @@ export default {
           </div>
 
           <div>
-            <label for="password" class="text-sm font-medium">Senha:</label>
+            <label for="password" :class="colorText()">Senha:</label>
 
             <div class="relative mt-1">
               <input

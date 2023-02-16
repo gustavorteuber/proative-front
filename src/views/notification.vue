@@ -1,6 +1,4 @@
 <script>
-import dashboard from "../views/master/dashboard.vue";
-import notificationbar from "../components/notifications.vue";
 import axios from "axios";
 export default {
   components: { notificationbar, dashboard },
