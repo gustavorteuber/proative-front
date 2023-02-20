@@ -1,848 +1,349 @@
+<template>
+  <div class="">
+    <div
+      @click="openSidebar(false)"
+      class="flex items-center justify-center rounded-r-md bg-gray-800 text-gray-300 ml-0 cursor-pointer absolute inset-0 mt-10 m-auto w-8 h-8"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-chevron-right"
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" />
+        <polyline points="9 6 15 12 9 18" />
+      </svg>
+    </div>
+    <div
+      id="sidebar"
+      class="overflow-y-scroll lg:overflow-y-auto fixed lg:sticky h-screen lg:h-auto z-40 top-0 bg-gray-900 pt-10 w-64 lg:w-72"
+    >
+      <div class="px-8">
+        <div class="flex items-center justify-between">
+          <div class="w-32">
+            <div
+              class="text-xl font-extrabold leading-6 text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400"
+            >
+              Proative
+            </div>
+          </div>
+          <div
+            @click="openSidebar(true)"
+            class="text-gray-700 ml-8 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-chevron-left"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z"></path>
+              <polyline points="15 6 9 12 15 18"></polyline>
+            </svg>
+          </div>
+        </div>
+        <ul class="my-10 flex flex-wrap">
+          <li class="w-1/2 flex justify-start mb-6">
+            <a
+              href="javascript:void(0)"
+              class="bg-gray-700 rounded-md text-gray-300 flex flex-col justify-center items-center w-20 h-20 p-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-layout-kanban"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z"></path>
+                <line x1="4" y1="4" x2="10" y2="4"></line>
+                <line x1="14" y1="4" x2="20" y2="4"></line>
+                <rect x="4" y="8" width="6" height="12" rx="2"></rect>
+                <rect x="14" y="8" width="6" height="6" rx="2"></rect>
+              </svg>
+              <p class="mt-1 uppercase font-semibold text-xs">kanban</p>
+            </a>
+          </li>
+          <li class="w-1/2 flex justify-end mb-6">
+            <a
+              href="javascript:void(0)"
+              class="bg-transparent rounded-md text-gray-600 flex flex-col justify-center items-center w-20 h-20 p-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-inbox"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z"></path>
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <path d="M4 13h3l3 3h4l3 -3h3"></path>
+              </svg>
+              <p class="mt-1 uppercase font-semibold text-xs">inbox</p>
+            </a>
+          </li>
+          <li class="w-1/2 flex justify-start mb-6">
+            <a
+              href="javascript:void(0)"
+              class="rounded-md bg-transparent text-gray-600 flex flex-col justify-center items-center w-20 h-20 p-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-notebook"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-11a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1m3 0v18"
+                ></path>
+                <line x1="13" y1="8" x2="15" y2="8"></line>
+                <line x1="13" y1="12" x2="15" y2="12"></line>
+              </svg>
+              <p class="mt-1 uppercase font-semibold text-xs">notebook</p>
+            </a>
+          </li>
+          <li class="w-1/2 flex justify-end mb-6">
+            <a
+              href="javascript:void(0)"
+              class="rounded-md bg-transparent text-gray-600 flex flex-col justify-center items-center w-20 h-20 p-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-calendar-event"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z"></path>
+                <rect x="4" y="5" width="16" height="16" rx="2"></rect>
+                <line x1="16" y1="3" x2="16" y2="7"></line>
+                <line x1="8" y1="3" x2="8" y2="7"></line>
+                <line x1="4" y1="11" x2="20" y2="11"></line>
+                <rect x="8" y="15" width="2" height="2"></rect>
+              </svg>
+              <p class="mt-1 uppercase font-semibold text-xs">calendar</p>
+            </a>
+          </li>
+          <li class="w-1/2 flex justify-start">
+            <a
+              href="javascript:void(0)"
+              class="rounded-md bg-transparent text-gray-600 flex flex-col justify-center items-center w-20 h-20 p-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-star"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M12 17.75l-6.172 3.245 1.179-6.873-4.993-4.867 6.9-1.002L12 2l3.086 6.253 6.9 1.002-4.993 4.867 1.179 6.873z"
+                ></path>
+              </svg>
+              <p class="mt-1 uppercase font-semibold text-xs">important</p>
+            </a>
+          </li>
+          <li class="w-1/2 flex justify-end">
+            <a
+              href="javascript:void(0)"
+              class="rounded-md bg-transparent text-gray-600 flex flex-col justify-center items-center w-20 h-20 p-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-stack"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z"></path>
+                <polyline points="12 4 4 8 12 12 20 8 12 4"></polyline>
+                <polyline points="4 12 12 16 20 12"></polyline>
+                <polyline points="4 16 12 20 20 16"></polyline>
+              </svg>
+              <p class="mt-1 uppercase font-semibold text-xs">projects</p>
+            </a>
+          </li>
+        </ul>
+        <div class="flex items-center justify-between text-gray-600">
+          <h4 class="uppercase font-semibold">List</h4>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="cursor-pointer icon icon-tabler icon-tabler-plus"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z"></path>
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </div>
+        <ul class="text-gray-600 mt-8">
+          <li class="mb-5">Grocery Items</li>
+          <li class="mb-5">Family</li>
+          <li>Friends</li>
+        </ul>
+        <div class="my-20">
+          <div class="flex items-center justify-between text-gray-600">
+            <h4 class="uppercase font-semibold">Labels</h4>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="cursor-pointer icon icon-tabler icon-tabler-plus"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z"></path>
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </div>
+          <ul class="text-gray-600 mt-8">
+            <li
+              v-for="(label, idx) in labels"
+              v-bind:key="idx"
+              class="mb-5 flex items-center"
+            >
+              <span
+                v-bind:class="label.theme"
+                class="mr-2 w-2 h-2 rounded-full"
+              ></span>
+              {{ label.title }}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="px-8 py-4 w-full border-t border-gray-800 flex items-center text-gray-600 uppercase text-xs"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="cursor-pointer icon icon-tabler icon-tabler-trash"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z"></path>
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="10" y1="11" x2="10" y2="17"></line>
+          <line x1="14" y1="11" x2="14" y2="17"></line>
+          <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
+          <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
+        </svg>
+        <p class="cursor-pointer pl-2">trash</p>
+      </div>
+    </div>
+  </div>
+</template>
 <script>
-import { mapState } from "pinia";
-import { useAuthStore } from "../components/login/stores/auth";
-import axios from "axios";
-let icon1 = document.getElementById("icon1");
-let menu1 = document.getElementById("menu1");
-const showMenu1 = (flag) => {
-  if (flag) {
-    icon1.classList.toggle("rotate-180");
-    menu1.classList.toggle("hidden");
-  }
-};
-let icon2 = document.getElementById("icon2");
-
-const showMenu2 = (flag) => {
-  if (flag) {
-    icon2.classList.toggle("rotate-180");
-  }
-};
-let icon3 = document.getElementById("icon3");
-
-const showMenu3 = (flag) => {
-  if (flag) {
-    icon3.classList.toggle("rotate-180");
-  }
-};
-
-let Main = document.getElementById("Main");
-let open = document.getElementById("open");
-let close = document.getElementById("close");
-
-const showNav = (flag) => {
-  if (flag) {
-    Main.classList.toggle("-translate-x-full");
-    Main.classList.toggle("translate-x-0");
-    open.classList.toggle("hidden");
-    close.classList.toggle("hidden");
-  }
-};
 export default {
   data() {
     return {
-      showDropDown: false,
-      showSide: true,
-      user: {},
-      superuser: "",
+      labels: [
+        {
+          title: "Work Related",
+          theme: "bg-indigo-600",
+        },
+        {
+          title: "Family",
+          theme: "bg-yellow-600",
+        },
+        {
+          title: "Friends",
+          theme: "bg-green-500",
+        },
+        {
+          title: "Grocery",
+          theme: "bg-purple-600",
+        },
+        {
+          title: "Utilities",
+          theme: "bg-blue-600",
+        },
+        {
+          title: "Rental",
+          theme: "bg-pink-600",
+        },
+        {
+          title: "Maintenance",
+          theme: "bg-red-600",
+        },
+      ],
     };
   },
-  async created() {
-    const res = await axios.get(`http://localhost:8000/usuario/${this.id}/`);
-    this.user = res.data;
-    console.log(this.user);
-  },
   methods: {
-    // hide show side bar
-    toggleSideBar() {
-      this.showSide = !this.showSide;
+    openSidebar(flag) {
+      let sidebar = document.getElementById("sidebar");
+      flag
+        ? sidebar.classList.add("hidden")
+        : sidebar.classList.remove("hidden");
     },
-    // toggle user
-    toggleDrop() {
-      this.showDropDown = !this.showDropDown;
-    },
-    colorBody() {
-      if (this.isDark == true) {
-        return "bg-neutral-900";
-      } else {
-        return "bg-white";
-      }
-    },
-  },
-  computed: {
-    ...mapState(useAuthStore, [
-      "id",
-      "is_superuser",
-      "username",
-      "email",
-      "foto",
-    ]),
   },
 };
 </script>
-
-<template>
-  <body :class="colorBody()">
-    <div
-      id="Main"
-      class="xl:rounded-r transform xl:translate-x-0 ease-in-out transition duration-500 flex justify-start items-start h-full w-full sm:w-64 bg-neutral-900 flex-col"
-    >
-      <div class="hidden xl:flex justify-start p-6 items-center space-x-3">
-        <p
-          class="text-2xl font-extrabold leading-6 text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400"
-        >
-          Proative
-        </p>
-      </div>
-      <div
-        class="mt-6 flex flex-col justify-start items-center pl-4 w-full border-gray-600 border-b space-y-3 pb-5"
-      >
-        <button
-          class="flex jusitfy-start items-center space-x-6 w-full focus:outline-none focus:text-indigo-400 text-white rounded"
-        >
-          <svg
-            class="fill-stroke"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9 4H5C4.44772 4 4 4.44772 4 5V9C4 9.55228 4.44772 10 5 10H9C9.55228 10 10 9.55228 10 9V5C10 4.44772 9.55228 4 9 4Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M19 4H15C14.4477 4 14 4.44772 14 5V9C14 9.55228 14.4477 10 15 10H19C19.5523 10 20 9.55228 20 9V5C20 4.44772 19.5523 4 19 4Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M9 14H5C4.44772 14 4 14.4477 4 15V19C4 19.5523 4.44772 20 5 20H9C9.55228 20 10 19.5523 10 19V15C10 14.4477 9.55228 14 9 14Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M19 14H15C14.4477 14 14 14.4477 14 15V19C14 19.5523 14.4477 20 15 20H19C19.5523 20 20 19.5523 20 19V15C20 14.4477 19.5523 14 19 14Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <p class="text-base leading-4">Dashboard</p>
-        </button>
-        <button
-          class="flex jusitfy-start items-center w-full space-x-6 focus:outline-none text-white focus:text-indigo-400 rounded"
-        >
-          <svg
-            class="fill-stroke"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M6 21V19C6 17.9391 6.42143 16.9217 7.17157 16.1716C7.92172 15.4214 8.93913 15 10 15H14C15.0609 15 16.0783 15.4214 16.8284 16.1716C17.5786 16.9217 18 17.9391 18 19V21"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <p class="text-base leading-4">Usuarios</p>
-        </button>
-      </div>
-      <div
-        class="flex flex-col justify-start items-center px-6 border-b border-gray-600 w-full"
-      >
-        <button
-          onclick="showMenu1(true)"
-          class="focus:outline-none focus:text-indigo-400 text-left text-white flex justify-between items-center w-full py-5 space-x-14"
-        >
-          <p class="text-sm leading-5 uppercase">OPÇÕES DE GERENCIAMENTO:</p>
-        </button>
-        <div
-          id="menu1"
-          class="flex justify-start flex-col w-full md:w-auto items-start pb-1"
-        >
-          <button
-            class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-full md:w-52"
-          >
-            <svg
-              class="fill-stroke"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15 10L11 14L17 20L21 4L3 11L7 13L9 19L12 15"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <p class="text-base leading-4">Chat Empresarial</p>
-          </button>
-
-          <button
-            class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-full md:w-52"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M14 8.00002C15.1046 8.00002 16 7.10459 16 6.00002C16 4.89545 15.1046 4.00002 14 4.00002C12.8954 4.00002 12 4.89545 12 6.00002C12 7.10459 12.8954 8.00002 14 8.00002Z"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M4 6H12"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M16 6H20"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M8 14C9.10457 14 10 13.1046 10 12C10 10.8954 9.10457 10 8 10C6.89543 10 6 10.8954 6 12C6 13.1046 6.89543 14 8 14Z"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M4 12H6"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M10 12H20"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M17 20C18.1046 20 19 19.1046 19 18C19 16.8955 18.1046 16 17 16C15.8954 16 15 16.8955 15 18C15 19.1046 15.8954 20 17 20Z"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M4 18H15"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M19 18H20"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <p class="text-base leading-4">Configurações</p>
-          </button>
-          <RouterLink to="/notification"
-            ><button
-              class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-full md:w-52"
-            >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10 6H7C6.46957 6 5.96086 6.21071 5.58579 6.58579C5.21071 6.96086 5 7.46957 5 8V17C5 17.5304 5.21071 18.0391 5.58579 18.4142C5.96086 18.7893 6.46957 19 7 19H16C16.5304 19 17.0391 18.7893 17.4142 18.4142C17.7893 18.0391 18 17.5304 18 17V14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M17 10C18.6569 10 20 8.65685 20 7C20 5.34314 18.6569 4 17 4C15.3431 4 14 5.34314 14 7C14 8.65685 15.3431 10 17 10Z"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <p class="text-base leading-4">Notificações</p>
-            </button></RouterLink
-          >
-
-          <button
-            class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-full md:w-52"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8 21H12"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M10 21V3"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M10 4L19 8L10 12"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <p class="text-base leading-4">Calendario</p>
-          </button>
-        </div>
-      </div>
-      <div
-        class="flex flex-col justify-start items-center px-6 border-b border-gray-600 w-full"
-      >
-        <div class="hidden flex justify-start flex-col items-start pb-5">
-          <button
-            class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-full md:w-52"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8 19C10.2091 19 12 17.2091 12 15C12 12.7909 10.2091 11 8 11C5.79086 11 4 12.7909 4 15C4 17.2091 5.79086 19 8 19Z"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M10.85 12.15L19 4"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M18 5L20 7"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M15 8L17 10"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <p class="text-base leading-4">Security</p>
-          </button>
-          <button
-            class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-full md:w-52"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M14 8.00002C15.1046 8.00002 16 7.10459 16 6.00002C16 4.89545 15.1046 4.00002 14 4.00002C12.8954 4.00002 12 4.89545 12 6.00002C12 7.10459 12.8954 8.00002 14 8.00002Z"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M4 6H12"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M16 6H20"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M8 14C9.10457 14 10 13.1046 10 12C10 10.8954 9.10457 10 8 10C6.89543 10 6 10.8954 6 12C6 13.1046 6.89543 14 8 14Z"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M4 12H6"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M10 12H20"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M17 20C18.1046 20 19 19.1046 19 18C19 16.8955 18.1046 16 17 16C15.8954 16 15 16.8955 15 18C15 19.1046 15.8954 20 17 20Z"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M4 18H15"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M19 18H20"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <p class="text-base leading-4">Settings</p>
-          </button>
-          <button
-            class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-full md:w-52"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10 6H7C6.46957 6 5.96086 6.21071 5.58579 6.58579C5.21071 6.96086 5 7.46957 5 8V17C5 17.5304 5.21071 18.0391 5.58579 18.4142C5.96086 18.7893 6.46957 19 7 19H16C16.5304 19 17.0391 18.7893 17.4142 18.4142C17.7893 18.0391 18 17.5304 18 17V14"
-                stroke="#9CA3AF"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M17 10C18.6569 10 20 8.65685 20 7C20 5.34314 18.6569 4 17 4C15.3431 4 14 5.34314 14 7C14 8.65685 15.3431 10 17 10Z"
-                stroke="#9CA3AF"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <p class="text-base leading-4">Notifications</p>
-          </button>
-          <button
-            class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-full md:w-52"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M17 11H7C5.89543 11 5 11.8955 5 13V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V13C19 11.8955 18.1046 11 17 11Z"
-                stroke="#9CA3AF"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z"
-                stroke="#9CA3AF"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M8 11V7C8 5.93913 8.42143 4.92172 9.17157 4.17157C9.92172 3.42143 10.9391 3 12 3C13.0609 3 14.0783 3.42143 14.8284 4.17157C15.5786 4.92172 16 5.93913 16 7V11"
-                stroke="#9CA3AF"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <p class="text-base leading-4">Passwords</p>
-          </button>
-          <button
-            class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-full md:w-52"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8 21H12"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M10 21V3"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M10 4L19 8L10 12"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <p class="text-base leading-4">Goals</p>
-          </button>
-        </div>
-      </div>
-      <div
-        class="flex flex-col justify-between items-center h-full pb-6 px-6 w-full space-y-32"
-      >
-        <div class="hidden flex justify-start flex-col items-start pb-5">
-          <button
-            class="flex justify-start items-center hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-52"
-          >
-            <svg
-              class="fill-stroke"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15 10L11 14L17 20L21 4L3 11L7 13L9 19L12 15"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <p class="text-base leading-4">Messages</p>
-          </button>
-          <button
-            class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-52"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8 19C10.2091 19 12 17.2091 12 15C12 12.7909 10.2091 11 8 11C5.79086 11 4 12.7909 4 15C4 17.2091 5.79086 19 8 19Z"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M10.85 12.15L19 4"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M18 5L20 7"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M15 8L17 10"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <p class="text-base leading-4">Security</p>
-          </button>
-          <button
-            class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-52"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M14 8.00002C15.1046 8.00002 16 7.10459 16 6.00002C16 4.89545 15.1046 4.00002 14 4.00002C12.8954 4.00002 12 4.89545 12 6.00002C12 7.10459 12.8954 8.00002 14 8.00002Z"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M4 6H12"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M16 6H20"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M8 14C9.10457 14 10 13.1046 10 12C10 10.8954 9.10457 10 8 10C6.89543 10 6 10.8954 6 12C6 13.1046 6.89543 14 8 14Z"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M4 12H6"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M10 12H20"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M17 20C18.1046 20 19 19.1046 19 18C19 16.8955 18.1046 16 17 16C15.8954 16 15 16.8955 15 18C15 19.1046 15.8954 20 17 20Z"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M4 18H15"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M19 18H20"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <p class="text-base leading-4">Settings</p>
-          </button>
-          <button
-            class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-52"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10 6H7C6.46957 6 5.96086 6.21071 5.58579 6.58579C5.21071 6.96086 5 7.46957 5 8V17C5 17.5304 5.21071 18.0391 5.58579 18.4142C5.96086 18.7893 6.46957 19 7 19H16C16.5304 19 17.0391 18.7893 17.4142 18.4142C17.7893 18.0391 18 17.5304 18 17V14"
-                stroke="#9CA3AF"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M17 10C18.6569 10 20 8.65685 20 7C20 5.34314 18.6569 4 17 4C15.3431 4 14 5.34314 14 7C14 8.65685 15.3431 10 17 10Z"
-                stroke="#9CA3AF"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <p class="text-base leading-4">Notifications</p>
-          </button>
-          <button
-            class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-52"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M17 11H7C5.89543 11 5 11.8955 5 13V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V13C19 11.8955 18.1046 11 17 11Z"
-                stroke="#9CA3AF"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z"
-                stroke="#9CA3AF"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M8 11V7C8 5.93913 8.42143 4.92172 9.17157 4.17157C9.92172 3.42143 10.9391 3 12 3C13.0609 3 14.0783 3.42143 14.8284 4.17157C15.5786 4.92172 16 5.93913 16 7V11"
-                stroke="#9CA3AF"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <p class="text-base leading-4">Passwords</p>
-          </button>
-          <button
-            class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-52"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8 21H12"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M10 21V3"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M10 4L19 8L10 12"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <p class="text-base leading-4">Goals</p>
-          </button>
-        </div>
-        <div class="flex justify-between items-center w-full">
-          <div class="flex justify-center items-center space-x-2">
-            <div>
-              <img
-                class="w-10 h-10 rounded-full"
-                :src="user.foto.url"
-                alt="avatar"
-              />
-            </div>
-            <div class="flex justify-start flex-col items-start">
-              <p class="cursor-pointer text-sm leading-5 text-white">
-                {{ user.username }}
-              </p>
-              <p class="cursor-pointer text-xs leading-3 text-gray-300">
-                {{ user.email }}
-              </p>
-            </div>
-          </div>
-          <svg
-            class="cursor-pointer"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10.325 4.317C10.751 2.561 13.249 2.561 13.675 4.317C13.7389 4.5808 13.8642 4.82578 14.0407 5.032C14.2172 5.23822 14.4399 5.39985 14.6907 5.50375C14.9414 5.60764 15.2132 5.65085 15.4838 5.62987C15.7544 5.60889 16.0162 5.5243 16.248 5.383C17.791 4.443 19.558 6.209 18.618 7.753C18.4769 7.98466 18.3924 8.24634 18.3715 8.51677C18.3506 8.78721 18.3938 9.05877 18.4975 9.30938C18.6013 9.55999 18.7627 9.78258 18.9687 9.95905C19.1747 10.1355 19.4194 10.2609 19.683 10.325C21.439 10.751 21.439 13.249 19.683 13.675C19.4192 13.7389 19.1742 13.8642 18.968 14.0407C18.7618 14.2172 18.6001 14.4399 18.4963 14.6907C18.3924 14.9414 18.3491 15.2132 18.3701 15.4838C18.3911 15.7544 18.4757 16.0162 18.617 16.248C19.557 17.791 17.791 19.558 16.247 18.618C16.0153 18.4769 15.7537 18.3924 15.4832 18.3715C15.2128 18.3506 14.9412 18.3938 14.6906 18.4975C14.44 18.6013 14.2174 18.7627 14.0409 18.9687C13.8645 19.1747 13.7391 19.4194 13.675 19.683C13.249 21.439 10.751 21.439 10.325 19.683C10.2611 19.4192 10.1358 19.1742 9.95929 18.968C9.7828 18.7618 9.56011 18.6001 9.30935 18.4963C9.05859 18.3924 8.78683 18.3491 8.51621 18.3701C8.24559 18.3911 7.98375 18.4757 7.752 18.617C6.209 19.557 4.442 17.791 5.382 16.247C5.5231 16.0153 5.60755 15.7537 5.62848 15.4832C5.64942 15.2128 5.60624 14.9412 5.50247 14.6906C5.3987 14.44 5.23726 14.2174 5.03127 14.0409C4.82529 13.8645 4.58056 13.7391 4.317 13.675C2.561 13.249 2.561 10.751 4.317 10.325C4.5808 10.2611 4.82578 10.1358 5.032 9.95929C5.23822 9.7828 5.39985 9.56011 5.50375 9.30935C5.60764 9.05859 5.65085 8.78683 5.62987 8.51621C5.60889 8.24559 5.5243 7.98375 5.383 7.752C4.443 6.209 6.209 4.442 7.753 5.382C8.753 5.99 10.049 5.452 10.325 4.317Z"
-              stroke="white"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
-              stroke="white"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
-      </div>
-    </div>
-  </body>
-</template>
+<style scoped>
+body {
+  font-family: "Lato", sans-serif;
+}
+</style>
